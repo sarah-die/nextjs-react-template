@@ -1,7 +1,7 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /*justify-content: flex-start;*/
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
@@ -16,6 +16,14 @@
   width: 100%;
   z-index: 2;
   font-family: var(--font-mono);
+}
+
+.todolist {
+  margin: 1.5rem;
+}
+
+.todoform {
+  margin: 1.5rem;
 }
 
 .description a {
