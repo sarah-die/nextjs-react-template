@@ -3,14 +3,12 @@ import styles from "./page.module.css";
 
 const ToDoForm = ({ toDos, setToDos }) => {
   const [toDo, setToDo] = useState("");
-  // const [toDos, setToDos] = useState([]);
 
   const onSubmit = (event) => {
     event.preventDefault();
 
-    const temp = [toDo, ...toDos];
+    const temp = [{ toDo: toDo, done: false }, ...toDos];
     setToDos(temp);
-
     setToDo("");
   };
 

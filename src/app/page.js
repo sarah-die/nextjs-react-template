@@ -11,7 +11,7 @@ export default function Home() {
     <main className={styles.main}>
       <h1>My ToDo-List</h1>
       <ToDoForm toDos={toDos} setToDos={setToDos} />
-      <ToDoList toDos={toDos} />
+      <ToDoList toDos={toDos} setToDos={setToDos} />
     </main>
   );
 }
