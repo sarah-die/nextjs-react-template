@@ -24,7 +24,7 @@ const ToDoForm = ({ toDos, setToDos }) => {
           name="todo"
           id="todo"
           type="text"
-          onChange={onChange}
+          onChange={(e) => onChange(e)}
           value={toDo}
         />
         <input type="submit" value="Add ToDo" />

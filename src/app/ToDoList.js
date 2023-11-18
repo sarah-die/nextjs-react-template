@@ -1,7 +1,7 @@
 import styles from "./page.module.css";
 
 const ToDoList = ({ toDos, setToDos }) => {
-  const onCheckboxChange = (index) => {
+  const onCheckboxChange = (index) => (event) => {
     const targetToDo = toDos[index];
     const temp = toDos.slice();
     temp.splice(index, 1, { ...targetToDo, done: !targetToDo.done });
@@ -22,7 +22,7 @@ const ToDoList = ({ toDos, setToDos }) => {
               name="done"
               type="checkbox"
               value={todo.done}
-              onChange={() => onCheckboxChange(index)}
+              onChange={onCheckboxChange(index)}
             ></input>
           </li>
         ))}
